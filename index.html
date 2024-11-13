@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello world!</title>
+</head>
+
+<style>
+    /* 
+    A grid of flex elements, for showing a bunch of project_frame's 
+    */
+    .project_grid {
+        gap: 4rem;
+        display: grid;
+        grid-auto-flow: dense;
+        grid-template-columns: repeat(auto-fill, minmax(40vh, 1fr));
+    }
+
+    /* 
+    A frame containing a single project. 
+    Top-level element of a project display.
+    */
+    .project_frame {
+        margin: 0;
+        aspect-ratio: 1920/1080;
+    }
+
+    /*
+    The container of the actual project stuff. 
+    Child of project_frame.
+    */
+    .project_frame_container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, .25));
+    }
+
+    /*
+    The image shown for a project.
+    Child of project_frame_container.
+    */
+
+    .project_image {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    /* 
+    The title of a project.
+    Child of project_frame_container.
+    Not visible by default, but covers the surface of project_frame_container
+    and fades into view when hovered over.
+    */
+    .project_title {
+        transition: 0.4s;
+        opacity: 0%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        left: 0;
+        top: 0;
+        position: absolute;
+        align-self: center;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.785);
+        color: aliceblue;
+    }
+
+    /* Does the actual fading in of project_title */
+    .project_title:hover {
+        opacity: 100%;
+    }
+</style>
+
+<header>
+    <h1>Hello! I'm <b>Mina Spijk</b></h1>
+    <p aria-roledescription="subtitle">Also known as Sindarin27 online</p>
+</header>
+
+<body>
+    <h2>Background</h2>
+    <p>Wow, you're a bit early. Sorry to disappoint you, but I only just started developing this website. Maybe if you
+        return later I'll have added some actual content!</p>
+    <div class="project_grid">
+        <div class="project_frame">
+            <div class="project_frame_container">
+                <img src="../agr_flying.png" class="project_image">
+                <div class="project_title">
+                    This is test image #1
+                </div>
+            </div>
+        </div>
+        <div class="project_frame">
+            <div class="project_frame_container">
+                <img src="../amazon-bistro-rain.png" class="project_image">
+                <div class="project_title">
+                    This is test image #2
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
