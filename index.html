@@ -27,7 +27,8 @@
         text-decoration: none;
     }
 
-    .navbutton-current, .navbutton:hover {
+    .navbutton-current,
+    .navbutton:hover {
         background-color: #111111;
         color: aliceblue;
     }
@@ -67,8 +68,19 @@
     }
 
     /*
-    The container of the actual project stuff. 
+    The thing that makes projects clickable.
     Child of project_frame.
+    */
+    .project_link {
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    }
+
+    /*
+    The container of the actual project stuff. 
+    Child of project_frame or project_link.
     */
     .project_frame_container {
         width: 100%;
@@ -86,6 +98,7 @@
         object-fit: cover;
         width: 100%;
         height: 100%;
+        border-radius: 0.25em;
     }
 
     /* 
@@ -117,8 +130,8 @@
     }
 
     /*
-    Text in a project description
-    Child of project_desc
+    Text in a project description.
+    Child of project_desc.
     */
     .project_title {
         margin: 0.5em;
@@ -126,8 +139,17 @@
     }
 
     /*
-    Text in a project description
-    Child of project_desc
+    Text in a project description, for extra long titles.
+    Child of project_desc.
+    */
+    .project_title_long {
+        margin: 0.5em;
+        font-size: 2rem;
+    }
+
+    /*
+    Text in a project description.
+    Child of project_desc.
     */
     .project_text {
         margin: 0.2em;
@@ -148,26 +170,79 @@
             <p class="background">Below is a showcase of some of my work!</p>
         </div>
 
-        <p>--- Wow, you're a bit early. Sorry to disappoint you, but I only just started developing this website. Maybe
-            if
-            you return later I'll have added some more content! ---</p>
+        <p>--- Wow, you're a bit early. Sorry to disappoint you, but I only just started developing this website. Some stuff might not work as intended yet! ---</p>
         <div class="project_grid">
             <div class="project_frame">
-                <div class="project_frame_container">
-                    <img src="agr_flying.png" class="project_image">
-                    <div class="project_desc">
-                        <h1 class="project_title">This is test image #1</h1>
-                        <p class="project_text">And it has some description</p>
+                <a href="volumetricraindroplets.html" class="project_link">
+                    <div class="project_frame_container">
+                        <img src="amazon-bistro-rain.png" class="project_image">
+                        <div class="project_desc">
+                            <h1 class="project_title_long">Applying Volumetric Sampling Methods to the Rendering of Rain
+                                Droplets</h1>
+                            <p class="project_text">Thesis, C++, RTX, PBR</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
+            
             <div class="project_frame">
-                <div class="project_frame_container">
-                    <img src="amazon-bistro-rain.png" class="project_image">
-                    <div class="project_desc">
-                        <h1 class="project_title">This is test image #2</h1>
+                <a href="gaslit.html" class="project_link">
+                    <div class="project_frame_container">
+                        <img src="gaslit-gameview.png" class="project_image">
+                        <div class="project_desc">
+                            <h1 class="project_title">Gaslit</h1>
+                            <p class="project_text">C#, Unity, Scrum, Serious Games</p>
+                        </div>
                     </div>
-                </div>
+                </a>
+            </div>
+            
+            <div class="project_frame">
+                <a href="advancedgraphics.html" class="project_link">
+                    <div class="project_frame_container">
+                        <img src="agr_flying.png" class="project_image">
+                        <div class="project_desc">
+                            <h1 class="project_title">Raytracer from scratch</h1>
+                            <p class="project_text">C#, RTX, GPU, PBR</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="project_frame">
+                <a href="sidetracked.html" class="project_link">
+                    <div class="project_frame_container">
+                        <img src="SideTrackedCover.png" class="project_image">
+                        <div class="project_desc">
+                            <h1 class="project_title">Side Tracked</h1>
+                            <p class="project_text">C#, Unity, Game jam, Web game</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="project_frame">
+                <a href="asoiaf.html" class="project_link">
+                    <div class="project_frame_container">
+                        <img src="westerosMap_duchies.png" class="project_image">
+                        <div class="project_desc">
+                            <h1 class="project_title_long">A Song of Ice and Fire Roleplaying Tool</h1>
+                            <p class="project_text">Python, Data management, Image processing</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="project_frame">
+                <a href="farsighted-mobs.html" class="project_link">
+                    <div class="project_frame_container">
+                        <img src="farsighted-logo.png" class="project_image">
+                        <div class="project_desc">
+                            <h1 class="project_title_long">Farsighted Mobs Rework</h1>
+                            <p class="project_text">Java, Game modification, Developer tool</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
