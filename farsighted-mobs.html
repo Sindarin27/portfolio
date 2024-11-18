@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Sindarin's portfolio</title>
+</head>
+
+<header class="navbar">
+    <a class="navbutton" href="index.html">Home</a>
+</header>
+
+<body>
+    <div class="page-container">
+        <h1 class="page_title">Farsighted Mobs Rework (2024)</h1>
+        <hr>
+        <img class="page-image" src="farsighted-preview.png">
+        <p>
+            Farsighted Mobs is one of my Minecraft mods, popular with modpack developers (people compiling a selection
+            of
+            mods and configuration settings to create a unique play experience) for its ability to make the game
+            significantly harder by allowing monsters to see the player from further away. The only functionality in the
+            mod when I created it in 2020 were the option to increase the default "follow range" of monsters, as well as
+            adding individual overrides for certain creatures. I desired more flexibility and control, which is why I
+            decided to rework the mod in October 2024.
+        </p>
+        <p>
+            Minecraft includes a predicate system used to generate loot when a chest is opened or a creature is killed
+            in the base game, and designed to be extremely flexible. By incorporating this predicate system to determine
+            whether a creature should be affected by my mod, modpack developers are granted the same options, and any
+            future predicates added to the base game will automatically be accessible to the mod. Any predicates added
+            by other mods will also be available to users of my mod, and my mod includes a small number of predicates
+            which can thus be used for loot generation too.
+        </p>
+        <p>
+            The game also uses an attribute system for creatures: each creature is assigned attributes for things such
+            as follow range, health, size, et cetera. The original mod only affected the follow range to make mobs see
+            the player from further away, but the same approach can be used to affect other attributes — including
+            attributes added by other mods or introduced in future versions of the game.
+        </p>
+        <p>
+            The combination of these two features creates an extremely flexible and modular system. The default
+            behaviour of the mod is only slightly changed: the distance monsters see players from now depends on the
+            difficulty of the game. But the new configuration options allow for nearly anything, from spawning animals
+            with less health on a player's first day to spawning larger monsters during a full moon.
+        </p>
+        <br>
+        <hr>
+        <p class="contact-me">Feel free to contact me if you want to chat! Send me an email at <u>mina.spijk@sindarin27.net</u>.</p>
+        <div class="navbar-centered">
+            <a class="navbutton" href="https://github.com/Sindarin27">GitHub</a>
+            <a class="navbutton" href="https://sindarin27.itch.io/">itch.io</a>
+            <a class="navbutton" href="https://www.curseforge.com/members/sindarin27/projects">CurseForge</a>
+            <a class="navbutton" href="https://modrinth.com/mod/farsighted-mobs">Modrinth</a>
+        </div>
+    </div>
+</body>

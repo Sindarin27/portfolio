@@ -1,0 +1,183 @@
+    :root {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .navbar-centered {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+
+    .navbutton {
+        font-size: 1.5em;
+        padding: .85rem;
+        margin: 1rem;
+        border-radius: .5rem;
+        transition: 0.3s;
+        color: #111111;
+        text-decoration: none;
+    }
+
+    .navbutton-current,
+    .navbutton:hover {
+        background-color: #111111;
+        color: aliceblue;
+    }
+
+    .page-container {
+        margin: 2rem;
+    }
+
+    .introduction {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 2rem;
+        font-weight: normal;
+    }
+
+    .background {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1.75rem;
+    }
+
+    /* 
+    A grid of flex elements, for showing a bunch of project_frame's 
+    */
+    .project_grid {
+        gap: 2rem;
+        display: grid;
+        grid-auto-flow: dense;
+        grid-template-columns: repeat(auto-fill, minmax(65vh, 1fr));
+    }
+
+    /* 
+    A frame containing a single project. 
+    Top-level element of a project display.
+    */
+    .project_frame {
+        margin: 0;
+        aspect-ratio: 1920/1080;
+    }
+
+    /*
+    The thing that makes projects clickable.
+    Child of project_frame.
+    */
+    .project_link {
+        height: 100%;
+        position: relative;
+        text-decoration: none;
+        width: 100%;
+    }
+
+    /*
+    The container of the actual project stuff. 
+    Child of project_frame or project_link.
+    */
+    .project_frame_container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, .25));
+    }
+
+    /*
+    The image shown for a project.
+    Child of project_frame_container.
+    */
+
+    .project_image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.25em;
+    }
+
+    /* 
+    The description of a project.
+    Child of project_frame_container.
+    Not visible by default, but covers the surface of project_frame_container
+    and fades into view when hovered over.
+    */
+    .project_desc {
+        transition: 0.4s;
+        opacity: 0%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        left: 0;
+        top: 0;
+        position: absolute;
+        align-self: center;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.785);
+        color: aliceblue;
+    }
+
+    /* Does the actual fading in of project_desc */
+    .project_desc:hover {
+        opacity: 100%;
+    }
+
+    /*
+    Text in a project description.
+    Child of project_desc.
+    */
+    .project_title {
+        margin: 0.5em;
+        font-size: 2.5rem;
+    }
+
+    /*
+    Text in a project description, for extra long titles.
+    Child of project_desc.
+    */
+    .project_title_long {
+        margin: 0.5em;
+        font-size: 2rem;
+    }
+
+    /*
+    Text in a project description.
+    Child of project_desc.
+    */
+    .project_text {
+        margin: 0.2em;
+        font-size: 1.25rem;
+    }
+    
+    .page-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .page_title {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .project-play-link {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .contact-me {
+        margin: 0.2em;
+        font-size: 1rem;
+        text-align: center;
+    }

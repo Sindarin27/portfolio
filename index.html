@@ -2,160 +2,9 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="stylesheet.css">
     <title>Sindarin's portfolio</title>
 </head>
-
-<style>
-    :root {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    .navbar {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-
-
-    .navbutton {
-        font-size: 1.5em;
-        padding: .85rem;
-        margin: 1rem;
-        border-radius: .5rem;
-        transition: 0.3s;
-        color: #111111;
-        text-decoration: none;
-    }
-
-    .navbutton-current,
-    .navbutton:hover {
-        background-color: #111111;
-        color: aliceblue;
-    }
-
-    .page-container {
-        margin: 2rem;
-    }
-
-    .introduction {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 2rem;
-        font-weight: normal;
-    }
-
-    .background {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 1.75rem;
-    }
-
-    /* 
-    A grid of flex elements, for showing a bunch of project_frame's 
-    */
-    .project_grid {
-        gap: 2rem;
-        display: grid;
-        grid-auto-flow: dense;
-        grid-template-columns: repeat(auto-fill, minmax(65vh, 1fr));
-    }
-
-    /* 
-    A frame containing a single project. 
-    Top-level element of a project display.
-    */
-    .project_frame {
-        margin: 0;
-        aspect-ratio: 1920/1080;
-    }
-
-    /*
-    The thing that makes projects clickable.
-    Child of project_frame.
-    */
-    .project_link {
-    height: 100%;
-    position: relative;
-    text-decoration: none;
-    width: 100%;
-    }
-
-    /*
-    The container of the actual project stuff. 
-    Child of project_frame or project_link.
-    */
-    .project_frame_container {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, .25));
-    }
-
-    /*
-    The image shown for a project.
-    Child of project_frame_container.
-    */
-
-    .project_image {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        border-radius: 0.25em;
-    }
-
-    /* 
-    The description of a project.
-    Child of project_frame_container.
-    Not visible by default, but covers the surface of project_frame_container
-    and fades into view when hovered over.
-    */
-    .project_desc {
-        transition: 0.4s;
-        opacity: 0%;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        width: 100%;
-        justify-content: center;
-        left: 0;
-        top: 0;
-        position: absolute;
-        align-self: center;
-        text-align: center;
-        background: rgba(0, 0, 0, 0.785);
-        color: aliceblue;
-    }
-
-    /* Does the actual fading in of project_desc */
-    .project_desc:hover {
-        opacity: 100%;
-    }
-
-    /*
-    Text in a project description.
-    Child of project_desc.
-    */
-    .project_title {
-        margin: 0.5em;
-        font-size: 2.5rem;
-    }
-
-    /*
-    Text in a project description, for extra long titles.
-    Child of project_desc.
-    */
-    .project_title_long {
-        margin: 0.5em;
-        font-size: 2rem;
-    }
-
-    /*
-    Text in a project description.
-    Child of project_desc.
-    */
-    .project_text {
-        margin: 0.2em;
-        font-size: 1.25rem;
-    }
-</style>
 
 <header class="navbar">
     <a class="navbutton navbutton-current" href="index.html">Home</a>
@@ -170,7 +19,8 @@
             <p class="background">Below is a showcase of some of my work!</p>
         </div>
 
-        <p>⚠️ Wow, you're a bit early. Sorry to disappoint you, but I only recently started developing this website. Some stuff might not work as intended yet! ⚠️</p>
+        <p>⚠️ Wow, you're a bit early. Sorry to disappoint you, but I only recently started developing this website.
+            Some stuff might not work as intended yet! ⚠️</p>
         <div class="project_grid">
             <div class="project_frame">
                 <a href="volumetricraindroplets.html" class="project_link">
@@ -184,7 +34,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div class="project_frame">
                 <a href="gaslit.html" class="project_link">
                     <div class="project_frame_container">
@@ -196,7 +46,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div class="project_frame">
                 <a href="advancedgraphics.html" class="project_link">
                     <div class="project_frame_container">
@@ -208,7 +58,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div class="project_frame">
                 <a href="sidetracked.html" class="project_link">
                     <div class="project_frame_container">
@@ -220,7 +70,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div class="project_frame">
                 <a href="asoiaf.html" class="project_link">
                     <div class="project_frame_container">
@@ -232,7 +82,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div class="project_frame">
                 <a href="farsighted-mobs.html" class="project_link">
                     <div class="project_frame_container">
@@ -244,6 +94,15 @@
                     </div>
                 </a>
             </div>
+        </div>
+        <br>
+        <hr>
+        <p class="contact-me">Feel free to contact me if you want to chat! Send me an email at <u>mina.spijk@sindarin27.net</u>.</p>
+        <div class="navbar-centered">
+            <a class="navbutton" href="https://github.com/Sindarin27">GitHub</a>
+            <a class="navbutton" href="https://sindarin27.itch.io/">itch.io</a>
+            <a class="navbutton" href="https://www.curseforge.com/members/sindarin27/projects">CurseForge</a>
+            <a class="navbutton" href="https://modrinth.com/mod/farsighted-mobs">Modrinth</a>
         </div>
     </div>
 </body>

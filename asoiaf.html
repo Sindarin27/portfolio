@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Sindarin's portfolio</title>
+</head>
+
+<header class="navbar">
+    <a class="navbutton" href="index.html">Home</a>
+</header>
+
+<body>
+    <div class="page-container">
+        <h1 class="page_title">A Song of Ice and Fire Roleplaying Tool (2024)</h1>
+        <hr>
+        <img class="page-image" src="westerosMap_duchies.png">
+        <p>
+            I developed an unofficial tool for the Song of Ice and Fire Roleplaying game with a small team of friends
+            from a data science and economics background. This tool assists the game masters ("referees" running the
+            game) with keeping a high-level overview of the game world, simulating things such as weather, food, and
+            troop movement that would otherwise take a lot of manual work. The project was split into multiple modules
+            that communicate through the file system. I worked on the modules for weather simulation and food production
+            and consumption, a tool to convert maps to a format usable with the tool, as well as the central module that
+            controls when the other modules should activate. Troop movement and the written specifications of each
+            module were handled by the rest of the team.
+        </p>
+        <p>
+            In case of both the weather and food modules, data management was the primary challenge. Data had to be
+            stored
+            in a format usable for all modules (for example, food production depends on the weather) as well as readable
+            for
+            the game masters (for example, the game master wants to tell a player how many weeks of food are in their
+            castle), which is why the choice was made to use CSV files for all modules. Both modules used a central
+            interface with functions for reading, updating, and writing the files available to the other modules, as
+            well as
+            a number of utility methods to handle their own internal logic to update the state of the world.
+        </p>
+        <img class="page-image" src="asoiaf_code_fragment.png">
+        <p>
+            To avoid the manual labor of drawing our own map or interpreting a map designed for humans rather than
+            computers, I designed the map conversion tool to create and visualise a map from files present in the
+            Crusader Kings 3 conversion mod "A Game of Thrones", set in the same world as the roleplaying game. This map
+            contained nearly 7000 regions, far too much for our game, but also contained files describing a hierarchy of
+            regions. My tool reads these files, traverses the hierarchy, and builds a new map at a scale with larger
+            regions. My weather module additionally needed information about the borders between regions, so I added a
+            step to the conversion program to detect all borders and their direction using a number of image processing
+            techniques. These borders are written to an additional CSV file, allowing game masters to make the final
+            call on borders: for example, a border might want to be removed due to a large mountain range separating the
+            two regions physically.
+
+        </p>
+        <img class="page-image" src="westerosMap_provinces.png">
+        <p>
+            The central module handles the communication between the game master and the other modules. This module
+            makes calls to all other modules to update the state of the world based on input by the game masters.
+        </p>
+        <p>
+            The tool was used live during a week-long game and the game masters considered the tool a great success,
+            reducing their workload even further than the Excel sheets used in previous games and considering to
+            automate even more parts of the game in the future.
+        </p>
+        <br>
+        <hr>
+        <p class="contact-me">Feel free to contact me if you want to chat! Send me an email at <u>mina.spijk@sindarin27.net</u>.</p>
+        <div class="navbar-centered">
+            <a class="navbutton" href="https://github.com/Sindarin27">GitHub</a>
+            <a class="navbutton" href="https://sindarin27.itch.io/">itch.io</a>
+            <a class="navbutton" href="https://www.curseforge.com/members/sindarin27/projects">CurseForge</a>
+            <a class="navbutton" href="https://modrinth.com/mod/farsighted-mobs">Modrinth</a>
+        </div>
+    </div>
+</body>
