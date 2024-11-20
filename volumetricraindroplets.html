@@ -17,13 +17,28 @@
         <img class="page-image" src="amazon-bistro-rain.png">
         <p>
             I developed a new technique for rendering physically accurate rain streaks for my master thesis and
-            implemented in the rendering software <a href="https://www.pbrt.org/">PBRT-4</a>. By sampling for the
-            presence of rain streaks in a procedurally-generated volume, existing importance sampling methods can be
-            applied to the rendering of rain streaks. This reduces noise, decreases memory usage, and allows physically
-            accurate rain to be rendered using the GPU.
+            implemented it in the rendering software <a href="https://www.pbrt.org/">PBRT-4</a>.
+        </p>
+        <p>
+            Inspired by volumetric rendering techniques such as the one implemented in <a
+                href="advancedgraphics.html">one of my previous projects</a>, I started researching the possibilities of
+            using the same techniques to render rain streaks from a procedurally generated volume. In addition to
+            researching more about existing volumetric rendering techniques, this included research into the physical
+            properties of rain and the challenges these would present. I also implemented a ground truth algorithm to
+            use for comparison with the method I was to develop.
+        </p>
+        <p>
+            The final implementation and math went smoothly and presented further optimisation possibilities by
+            replacing the smallest rain drops with a uniform fog throughout the scene. The extra predictability
+            presented by volume sampling allows a lot of noise reduction compared to the ground truth method, and allows
+            the algorithm to run on the GPU. The method is still impractically slow for real-time rendering and requires
+            further research to be fully physically accurate, but is currently one of the first approaches to rain
+            rendering in the raytracing scene.
         </p>
         <br>
-        <p class="contact-me">Feel free to contact me if you want to chat! Send me an email at <u>mina.spijk@sindarin27.net</u>.</p>
+        <p class="contact-me">Feel free to contact me if you want to chat! Send me an email at
+            <u>mina.spijk@sindarin27.net</u>.
+        </p>
         <div class="navbar-centered">
             <a class="navbutton" href="https://github.com/Sindarin27">GitHub</a>
             <a class="navbutton" href="https://sindarin27.itch.io/">itch.io</a>

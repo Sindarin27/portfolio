@@ -8,9 +8,11 @@ A rough draft of the things that will be shown and discussed in the portfolio is
 
 ### Applying Volumetric Sampling Methods to the Rendering of Rain Droplets (2024)
 ![Amazon Bistro scene displaying rain](amazon-bistro-rain.png)
-I developed a new technique for rendering physically accurate rain streaks for my master thesis and implemented in the rendering software [PBRT-4](https://www.pbrt.org/). By sampling for the presence of rain streaks in a procedurally-generated volume, existing importance sampling methods can be applied to the rendering of rain streaks. This reduces noise, decreases memory usage, and allows physically accurate rain to be rendered using the GPU.
+I developed a new technique for rendering physically accurate rain streaks for my master thesis and implemented it in the rendering software [PBRT-4](https://www.pbrt.org/). 
 
-Keywords: C++, RTX, PBR
+Inspired by volumetric rendering techniques such as the one implemented in <a href="advancedgraphics.html">one of my previous projects</a>, I started researching the possibilities of using the same techniques to render rain streaks from a procedurally generated volume. In addition to researching more about existing volumetric rendering techniques, this included research into the physical properties of rain and the challenges these would present. I also implemented a ground truth algorithm to use for comparison with the method I was to develop.
+
+The final implementation and math went smoothly and presented further optimisation possibilities by replacing the smallest rain drops with a uniform fog throughout the scene. The extra predictability presented by volume sampling allows a lot of noise reduction compared to the ground truth method, and allows the algorithm to run on the GPU. The method is still impractically slow for real-time rendering and requires further research to be fully physically accurate, but is currently one of the first approaches to rain rendering in the raytracing scene.
 
 ### Gaslit (2023)
 ![Screenshot of the game Gaslit. Tiles the player can place are shown in the bottom-left corner. A quest bubble is shown above one of the communities towards the bottom-right corner, displaying the requirements of the quest and the progress towards them. An LNG terminal is visible towards the middle-left, with a pipeline leading to a gas field.](gaslit-gameview.png)
