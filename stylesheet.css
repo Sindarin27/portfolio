@@ -166,6 +166,14 @@
         border-radius: 0.25em;
     }
 
+    .page-image-no-resize {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        filter: drop-shadow(0 0.5rem 0.5rem rgba(0, 0, 0, .25));
+        border-radius: 0.25em;
+    }
+
     .page_title {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 2rem;
